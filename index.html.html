@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>M&M INDUMENTARIA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="https://wa.me/3624800948" class="whatsapp-float" target="_blank">
+<img src="imagenes/whatsapp.png" class="whatsapp-icon">
+</a>
+
+<header>
+<h1>✨ M&M INDUMENTARIA ✨</h1>
+<p>INDUMENTARIA UNISEX RIO GALLEGOS</p>
+</header>
+
+
+<div class="carrito-btn" onclick="toggleCarrito()">
+🛒
+<span id="contador-carrito" class="contador">0</span>
+</div>
+
+<div id="toast" class="toast">Producto agregado</div>
+
+<div id="carrito" class="carrito-panel">
+
+<div class="carrito-header">
+<h2>Tu carrito</h2>
+<span class="cerrar" onclick="toggleCarrito()">✖</span>
+</div>
+
+<div id="lista-carrito"></div>
+
+<h3>Total: $<span id="total-carrito">0</span></h3>
+
+<h3>Selecciona tu forma de pago</h3>
+
+<div class="formas-pago">
+
+<button class="btn-pago-metodo" onclick="seleccionarPago('Efectivo', this)">
+Efectivo
+</button>
+
+<button class="btn-pago-metodo" onclick="seleccionarPago('Transferencia', this)">
+Transferencia
+</button>
+
+<button class="btn-pago-metodo" onclick="seleccionarPago('Tarjeta', this)">
+Tarjeta
+</button>
+
+</div>
+
+<button id="btnEnviarPedido" class="btn-enviar" onclick="finalizarCompra()" style="display:none;">
+Mandar pedido a WhatsApp
+</button>
+
+</div>
+
+<div class="contenido-principal">
+<div class="buscador">
+<input type="text" id="inputBuscador" placeholder="Buscar producto..." onkeyup="buscarProducto()">
+</div>
+<section class="catalogo">
+
+<h2 class="titulo-categoria">CAMPERA GRUESA ADULTO</h2>
+
+<div class="producto">
+
+<img src="./imagenes/campera grande 1.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera grande 1.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera grande3.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con tela plush por dentro 
+</p>
+
+<p class="precio">$31.500</p>
+
+<div class="talles">
+<button class="btn-talle">L/G</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/campera grande 2.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera grande 2.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera grande6.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con lana de cordero por dentro
+</p>
+
+<p class="precio">$31.500</p>
+
+<div class="talles">
+<button class="btn-talle">L/G</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/campera grande4.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera grande4.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera grande5.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con tela plush por dentro 
+</p>
+
+<p class="precio">$31.500</p>
+
+<div class="talles">
+<button class="btn-talle">L/G</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/campera grande7.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera grande8.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera grande7.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con plush por dentro 
+</p>
+
+<p class="precio">$31.500</p>
+
+<div class="talles">
+<button class="btn-talle">XL/G</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+
+<h2 class="titulo-categoria">CAMPERA INTERMEDIA ADULTO</h2>
+<div class="producto">
+
+<img src="./imagenes/campera5.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera 4.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera5.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con lana de cordero por dentro 
+</p>
+
+<p class="precio">$27.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/campera 3.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera2.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera 3.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con lana de cordero por dentro 
+</p>
+
+<p class="precio">$27.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/campera.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/campera1.jpeg" onclick="cambiarImagen(this)">
+<img src="./imagenes/campera.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CAMPERA</h3>
+
+<p class="descripcion">
+Con lana de cordero por dentro 
+</p>
+
+<p class="precio">$27.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<h2 class="titulo-categoria">CONJUNTO ABRIGADO Y ROMPEVIENTO</h2>
+<div class="producto">
+
+<img src="./imagenes/conjunto 3.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/conjunto 3.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CONJUNTO AZUL</h3>
+
+<p class="descripcion">
+-
+</p>
+
+<p class="precio">$38.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/conjunto 4.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/conjunto 4.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CONJUNTO TURQUESA</h3>
+
+<p class="descripcion">
+-
+</p>
+
+<p class="precio">$38.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/congunto 2.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/congunto 2.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CONJUNTO VERDE</h3>
+
+<p class="descripcion">
+-
+</p>
+
+<p class="precio">$38.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/conjunto 1.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/conjunto 1.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>CONJUNTO VIOLETA</h3>
+
+<p class="descripcion">
+-
+</p>
+
+<p class="precio">$38.500</p>
+
+<div class="talles">
+<button class="btn-talle">L</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+
+<h2 class="titulo-categoria">BUZO DE ARGENTINA</h2>
+<div class="producto">
+
+<img src="./imagenes/BUZO ARG.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/buzo arg.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>BUZO AFA.</h3>
+
+<p class="descripcion">
+DEPORTIVO
+</p>
+
+<p class="precio">$22.500</p>
+
+<div class="talles">
+<button class="btn-talle">TALLE UNICO</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/buzo argentina.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/buzo argentina.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>BUZO</h3>
+
+<p class="descripcion">
+tela plush
+</p>
+
+<p class="precio">$20.500</p>
+
+<div class="talles">
+<button class="btn-talle">TALLE UNICO</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+<div class="producto">
+
+<img src="./imagenes/buzo largo.jpeg" class="principal">
+
+<div class="miniaturas">
+
+<img src="./imagenes/buzo largo.jpeg" onclick="cambiarImagen(this)">
+</div>
+
+<h3>BUZO</h3>
+
+<p class="descripcion">
+Con tela plush
+</p>
+
+<p class="precio">$22.500</p>
+
+<div class="talles">
+<button class="btn-talle">TALLE UNICO</button>
+
+</div>
+
+<button onclick="agregarAlCarrito(this)">
+Agregar al carrito
+</button>
+
+</div>
+
+
+<div class="fondo-footer">
+
+<div class="contacto-final">
+
+<p class="texto-contacto">
+Cualquier consulta no dudes en contactarnos
+</p>
+
+<div class="botones-contacto">
+
+<a href="https://www.instagram.com/1ndumentaria.mym" target="_blank" class="btn-red">
+<img src="imagenes/instagram.jpg" class="icono-red">
+</a>
+
+<a href="https://wa.me/3624800948" target="_blank" class="btn-red">
+<img src="imagenes/whatsapp.png" class="icono-red">
+</a>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 M&M INDUMENTARIA - Todos los derechos reservados</p>
+</footer>
+
+</div>
+
+<script>
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+let formaPagoSeleccionada = "";
+
+actualizarCarrito();
+
+/* SELECCIONAR TALLE */
+
+document.addEventListener("click",function(e){
+
+if(e.target.classList.contains("btn-talle")){
+
+let grupo=e.target.parentElement.querySelectorAll(".btn-talle");
+
+grupo.forEach(btn=>btn.classList.remove("activo"));
+
+e.target.classList.add("activo");
+
+}
+
+});
+
+/* AGREGAR AL CARRITO */
+
+function agregarAlCarrito(boton){
+
+let producto = boton.closest(".producto");
+
+let nombreBase = producto.querySelector("h3").innerText;
+
+let precio = parseInt(producto.querySelector(".precio").innerText.replace(/\D/g,''));
+
+let imagen = producto.getElementsByTagName("img")[0].src;
+
+let talleSeleccionado = producto.querySelector(".btn-talle.activo");
+
+if(!talleSeleccionado){
+alert("Seleccioná un talle antes de agregar al carrito");
+return;
+}
+
+let talle = talleSeleccionado.innerText;
+
+let nombreFinal = nombreBase + " - Talle " + talle;
+
+if(carrito[nombreFinal]){
+carrito[nombreFinal].cantidad++;
+}else{
+carrito[nombreFinal]={
+precio:precio,
+imagen:imagen,
+cantidad:1
+};
+}
+
+guardarCarrito();
+actualizarCarrito();
+animarCarrito();
+mostrarToast();
+
+}
+
+/* CAMBIAR CANTIDAD */
+
+function cambiarCantidad(nombre,cambio){
+
+carrito[nombre].cantidad+=cambio;
+
+if(carrito[nombre].cantidad<=0){
+delete carrito[nombre];
+}
+
+guardarCarrito();
+actualizarCarrito();
+
+}
+
+/* GUARDAR */
+
+function guardarCarrito(){
+localStorage.setItem("carrito",JSON.stringify(carrito));
+}
+
+/* ACTUALIZAR CARRITO */
+
+function actualizarCarrito(){
+
+const lista=document.getElementById("lista-carrito");
+const contador=document.getElementById("contador-carrito");
+const totalElemento=document.getElementById("total-carrito");
+
+lista.innerHTML="";
+
+let total=0;
+let cantidadTotal=0;
+
+for(let nombre in carrito){
+
+let item=carrito[nombre];
+
+total+=item.precio*item.cantidad;
+cantidadTotal+=item.cantidad;
+
+lista.innerHTML+=`
+
+<div class="item-carrito">
+
+<img src="${item.imagen}" class="img-carrito">
+
+<div class="info">
+<span>${nombre}</span>
+<span>$${item.precio}</span>
+</div>
+
+<div class="controles">
+<button onclick="cambiarCantidad('${nombre}',-1)">-</button>
+<span>${item.cantidad}</span>
+<button onclick="cambiarCantidad('${nombre}',1)">+</button>
+<button onclick="cambiarCantidad('${nombre}',-${item.cantidad})">🗑</button>
+</div>
+
+</div>
+
+`;
+
+}
+
+contador.textContent=cantidadTotal;
+totalElemento.textContent=total;
+
+}
+
+/* ABRIR CARRITO */
+
+function toggleCarrito(){
+document.getElementById("carrito").classList.toggle("activo");
+}
+
+/* SELECCIONAR PAGO */
+
+function seleccionarPago(tipo,boton){
+
+formaPagoSeleccionada=tipo;
+
+document.querySelectorAll(".btn-pago-metodo").forEach(btn=>{
+btn.classList.remove("activo");
+});
+
+boton.classList.add("activo");
+
+document.getElementById("btnEnviarPedido").style.display="block";
+
+}
+
+/* FINALIZAR COMPRA */
+
+function finalizarCompra(){
+
+if(Object.keys(carrito).length===0){
+alert("El carrito está vacío");
+return;
+}
+
+if(formaPagoSeleccionada===""){
+alert("Selecciona una forma de pago");
+return;
+}
+
+let mensaje="Hola! Quiero hacer el siguiente pedido:%0A%0A";
+
+let total=0;
+
+for(let nombre in carrito){
+
+let item=carrito[nombre];
+
+mensaje+=`• ${nombre} x${item.cantidad} - $${item.precio*item.cantidad}%0A`;
+
+total+=item.precio*item.cantidad;
+
+}
+
+mensaje+=`%0A💰 Total: $${total}%0A`;
+mensaje+=`💳 Forma de pago: ${formaPagoSeleccionada}`;
+
+let numero="3624800948";
+
+window.open(`https://wa.me/${numero}?text=${mensaje}`,"_blank");
+
+}
+
+/* ANIMACIONES */
+
+function animarCarrito(){
+
+const btn=document.querySelector(".carrito-btn");
+
+btn.classList.add("animar");
+
+setTimeout(()=>{
+btn.classList.remove("animar");
+},300);
+
+}
+
+function mostrarToast(){
+
+const toast=document.getElementById("toast");
+
+toast.classList.add("mostrar");
+
+setTimeout(()=>{
+toast.classList.remove("mostrar");
+},2000);
+
+}
+function buscarProducto(){
+
+let input = document.getElementById("inputBuscador").value.toLowerCase();
+let productos = document.querySelectorAll(".producto");
+
+productos.forEach(producto => {
+
+let nombre = producto.querySelector("h3").innerText.toLowerCase();
+
+if(nombre.includes(input)){
+producto.style.display = "block";
+}else{
+producto.style.display = "none";
+}
+
+});
+
+}
+function cambiarImagen(img){
+
+let producto = img.closest(".producto");
+
+let imagenPrincipal = producto.querySelector(".principal");
+
+imagenPrincipal.src = img.src;
+
+}
+</script>
+
+</body>
+</html>
